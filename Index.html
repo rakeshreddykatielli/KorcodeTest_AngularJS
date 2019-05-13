@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Example</title>
+
+  <script src="https://code.angularjs.org/1.6.9/angular-route.js"></script>
+  <script src="https://code.angularjs.org/1.6.9/angular.min.js"></script>
+  <script src="https://code.angularjs.org/1.6.9/angular.js"></script>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+  <script type="text/javascript" src="https://cdn.rawgit.com/AlphaGit/ng-pattern-restrict/master/src/ng-pattern-restrict.min.js"></script>
+  <script src="https://code.angularjs.org/snapshot/angular.min.js"></script>
+  <script src="Script.js"></script>
+  
+
+  
+</head>
+<body ng-app="httpExample">
+  <div ng-controller="FetchController">
+  <select ng-model="method" aria-label="Request method">
+    <option>GET</option>
+    <option>JSONP</option>
+  </select>
+  <input type="text" ng-model="url" size="80" aria-label="URL" />
+  <button id="fetchbtn" ng-click="fetch()">Fetch</button><br>
+  <pre>http status code: {{status}}</pre>
+  <pre>http response data: {{data}}</pre>
+</div>
+</body>
+</html>
